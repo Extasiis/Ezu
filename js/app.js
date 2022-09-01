@@ -1,11 +1,12 @@
-const explora = () => {
-    const explorar = document.querySelector('.nfts__explora')
-
-    explorar.classList.toggle('active')
+const menu = () => {
+    const navIco = document.querySelector('.ico-nav');
+    const nav = document.querySelector('.nav__contenedor')
+    navIco.classList.toggle('active')
+    nav.classList.toggle('active')
 }
 
-//Filtro
 
+//Filtro
 const luz = () => {
     const tipo = document.querySelector('.luz')
 
@@ -28,6 +29,13 @@ const tierra = () => {
     const tipo = document.querySelector('.tierra')
 
     tipo.classList.toggle('active')
+}
+
+//BTN Explora
+const explora = () => {
+    const explorar = document.querySelector('.nfts__explora')
+
+    explorar.classList.toggle('active')
 }
 
 //Road Map
@@ -76,3 +84,4 @@ document.body.style.setProperty('--svg-revelation', scrollPosition);
 
 
 })
+

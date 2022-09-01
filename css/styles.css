@@ -11,10 +11,10 @@
 body{
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
-    padding: 30px 100px;
+    padding: 30px 100px; 
     color: var(--color-text);
     background: var(--color-fondo);
-    min-height: 700vh;
+    position: relative;
 }
 
 body::after{
@@ -22,7 +22,7 @@ body::after{
     position: fixed;
     right: 0;
     top: calc(var(--start) * 1px);
-    background: green;
+    /* background: green; */
     width: 100px;
     height: 3px;
     z-index: 6;
@@ -135,17 +135,19 @@ section{
 .background__glass{
     position: absolute;
     overflow: hidden;
-    height: 600vh;
     top: 30px;
     left: 30px;
     right: 30px;
-    bottom: 30px;
+    bottom: 50px;
+    display: flex;
+    margin: 0 auto;
     box-shadow: 0 4px 30px rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(18.8px);
     -webkit-backdrop-filter: blur(18.8px);
     border: 0px solid rgba(255, 255, 255, 0.5);
     border-radius: 16px;
     z-index: 3;
+    max-width: 1700px;
 }
 
 .background__glass span{
@@ -226,7 +228,7 @@ section{
 @keyframes movimiento {
     0%{
         left: 10%;
-        transform: translateY(700vh) scale(0.2);
+        transform: translateY(800vh) scale(0.2);
         filter: invert(62%) sepia(27%) saturate(6702%) hue-rotate(352deg) brightness(98%) contrast(91%);
     }
     60%{
@@ -235,7 +237,7 @@ section{
     }
     100%{
         left: 20%;
-        transform: translateY(-700px) scale(0.9);
+        transform: translateY(-800px) scale(0.9);
         filter: invert(17%) sepia(79%) saturate(6932%) hue-rotate(330deg) brightness(100%) contrast(93%);
     }
 }
@@ -243,7 +245,7 @@ section{
 @keyframes movimiento2 {
     0%{
         right: 10%;
-        transform: translateY(700vh) scale(0.2);
+        transform: translateY(800vh) scale(0.2);
         filter: invert(100%) sepia(33%) saturate(2150%) hue-rotate(175deg) brightness(96%) contrast(103%);
     }
     60%{
@@ -262,14 +264,15 @@ section{
 /* HEADER */
 
 header{
-    width: 100%;
-    padding: 30px 0;
-    position: relative;
+    position: absolute;
+    max-width: 1600px;
+    height: 90px;
+    left: 100px;
+    right: 100px;
     z-index: 3;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -353,11 +356,13 @@ header{
     background: var(--color-btn);
 }
 
+/* HOME */
+
 .home{
     position: relative;
     display: flex;
     justify-content: space-between;
-    height: 80vh;
+    min-height: 100vh;
     align-items: center;
     z-index: 3;
 }
@@ -469,7 +474,6 @@ header{
 /* NFTs */
 
 .nfts{
-    width: 100%;
     position: relative;
     z-index: 3;
     margin-top: 100px;
@@ -881,8 +885,8 @@ header{
     position: relative;
     z-index: 3;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
 }
 
 .team__contenedor{
@@ -890,12 +894,26 @@ header{
     grid-template-columns: repeat( auto-fit, minmax(290px, 2fr) );
     column-gap: 10px;
     margin-top: 20px;
-    justify-content: space-between;
+    justify-items: center;
 }
 
 .team__tarjetas{
     width: 280px;
-    transition: all 0.3s;
+    transition: all 0.3s;    
+    position: relative;
+    
+}
+
+.team__tarjetas::before{
+    content: "";
+    position: absolute;
+    right: 1px;
+    top: 110px;
+    background: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 145px;
+    box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 20px 20px 0 0;
 }
 
 .team__tarjetas:hover{
@@ -906,6 +924,7 @@ header{
     height: 250px;
     position: relative;
     overflow: hidden;
+    box-shadow: 3px ;
 }
 
 .team__tarjetas-header::before{
@@ -919,6 +938,7 @@ header{
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     border-radius: 20px 20px 0 0;
+    box-shadow: inset -2px 0px 2px #00000028;
 }
 
 .team__tarjetas-header img{
@@ -929,19 +949,215 @@ header{
     filter: drop-shadow(3px 1px 3px rgba(0, 0, 0, 0.6));
 }
 
-.team__tarjetas:hover img{
+.team__tarjetas:hover .team__tarjetas-header img{
     top: 7px;
     filter: drop-shadow(3px 1px 6px rgba(0, 0, 0, 0.6));
 }
 
 .team__tarjetas-body{
-    height: 250px;
     background: rgba(255, 255, 255, 0.5);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     border-radius: 0 0 20px 20px;
+    padding: 15px 15px 25px 15px;
+    color: rgba(0, 0, 0, 0.7);
+    box-shadow: 4px 4px 4px #00000028,
+                inset -2px -2px 2px #00000028;
+ }
+
+
+.team__tarjetas-title{
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.5rem;
 }
 
+.team__tarjetas-parrafo{
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.team__tarjetas-redes{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    column-gap: 10px;
+}
+
+
+.team__tarjetas-redes img{
+    transform: scale(0.8);
+    transition: 0.5s;
+    width: 28px;
+    filter: invert(1);
+}
+
+.team__tarjetas-redes a{
+    background: var(--color-btn);
+    border-bottom: none;
+}
+
+.team__tarjetas-redes .btn-ico a:hover img{
+    transform: scale(1);
+}
+
+/* FAQ */
+
+.faq{
+    position: relative;
+    z-index: 4;
+    display: flex;
+    height: 500px;
+    grid-column-gap: 50px;
+    max-width: 1560px;
+    margin-top: 200px;
+}
+
+.faq::before{
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -70px;
+    z-index: 0;
+    width: 100%;
+    background: rgba(35, 88, 137, 0.7);
+    border-radius: 16px 16px 0 0;
+    box-shadow: inset 0px 2px 10px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(30.8px);
+    -webkit-backdrop-filter: blur(30.8px);
+    padding: 0px 70px;
+    height: 550px;    
+}
+
+.faq__header{
+    min-width: 500px;
+    position: relative;
+}
+
+.faq__title{
+    text-align: start;
+    margin: 10px 0;
+    color: var(--color-text);
+}
+
+.faq__description{
+    color: var(--color-white);
+    font-size: 0.9rem;
+}
+
+.faq__body{
+    display: flex;
+    flex-direction: column;
+}
+
+.faq__faq{
+    color: var(--color-white);
+}
+
+.faq__selection{
+    appearance: none;
+}
+
+.faq__selection-label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin-right: 20px;
+}
+
+.faq__selection-label::after{
+    content: '+';
+    position: absolute;
+    right: 30px;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.315);
+    transition: transform 1s;
+}
+
+.faq__selection-label h2{
+    font-size: 1.2rem;
+}
+
+.faq__selection-label h3{
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.452);
+}
+
+.faq__faq:hover .faq__selection-label::after,
+.faq__faq:hover .faq__selection-label h3
+{
+    background: var(--color-btn);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.faq__selection:checked ~ .faq__selection-label::after{
+    transform: rotate(135deg);
+}
+
+.faq__selection:checked ~ .faq__selection-label h2,
+.faq__selection:checked ~ .faq__selection-label h3,
+.faq__selection:checked ~ .faq__selection-label::after{
+    background: var(--color-btn);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.faq__respuesta{
+    position: relative;
+    max-height: 0;
+    transition: 0.8s;
+    overflow: hidden;
+}
+
+.faq__selection:checked ~ .faq__respuesta{
+    max-height: 100vh;
+}
+
+.footer{
+    position: relative;
+    z-index: 4;
+    display: flex;
+    grid-column-gap: 50px;
+    min-height: 200px;
+    max-width: 1560px;
+    margin: 0 auto;
+}
+
+.footer__contenedor{
+    content: '';
+    position: absolute;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0px;
+    left: -70px;
+    z-index: 0;
+    width: 100%;
+    background: #235789;
+    border-radius: 0 0 16px 16px;
+    backdrop-filter: blur(30.8px);
+    -webkit-backdrop-filter: blur(30.8px);
+    box-shadow: inset 0px -4px 10px rgba(255, 255, 255, 0.5);
+    padding: 0px 70px;
+    text-align: center;
+}
+
+
+.footer__tarjetas-redes{
+    display: flex;
+    column-gap: 20px;
+}
+
+.footer__tarjetas-redes img{
+    width: 28px;
+    filter: invert(1);
+    transform: scale(0.8);
+    transition: 0.3s;
+}
 
 
 @keyframes dash {
@@ -992,6 +1208,425 @@ header{
     .background__part-2{
         right: 10%;
         animation: movimiento2 30s linear infinite;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    /* Global */
+    body{
+        padding: 0px;
+        width: 100%;
+    }
+
+    section{
+        padding: 0 50px;
+    }
+
+    header{
+       padding: 10px 50px;
+    }
+
+    .background__glass{
+        position: absolute;
+        overflow: hidden;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .title{
+        font-size: 2.3rem;
+        text-align: center;
+    }
+
+    .subtitle{
+        font-size: 2.3rem;
+    }
+
+     /* Nav */
+
+     header{
+        justify-content: flex-start;
+        z-index: 4;
+        left: 0;
+        right: 0;
+    }
+
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        width: 100%;
+        min-height: 100vh;
+        top: 0;
+        right: 0;
+        left: 0;
+        background: #235789;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+        transition: all 0.5s ease;
+        row-gap: 15px;
+        
+    }
+
+    .nav__lista{
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    .nav__listas{
+        width: 300px;
+    }
+
+    .nav__enlace{
+        font-size: 1.6rem;
+    }
+
+    .nav .btn__contenedor{
+        width: 300px;
+    }
+
+    .ico-nav{
+        position: absolute;
+        background: url('../Recursos/img/menu.png') center no-repeat;
+        background-size: 32px;
+        width: 40px;
+        height: 40px;
+        right: 50px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1;
+        transition: 0.2s;
+    }
+
+    .ico-nav.active{
+        position: fixed;
+        background: url('../Recursos/img/close.png') center no-repeat;
+        background-size: 32px;
+        filter: invert(1);
+    }
+
+    .ico-nav.active ~ .nav{
+        opacity: 1;
+        visibility: visible;
+    }
+
+     /* Home */
+
+     .home{
+        flex-direction: column;
+        min-height: 100vh;
+        justify-content: center;
+        row-gap: 20px;
+        top: 10vh;
+     }
+
+     .home__text{
+        margin: 0;
+        display: flex;
+        flex-direction: column;        
+        align-items: center;
+     }
+    
+    .home__title{
+       text-align: center;
+    }
+
+    .home__subtitle{
+        text-align: center;
+    }
+    
+    .home__parrafo{
+        text-align: center;
+        min-width: 100px;
+    }
+
+    .home__botons{
+        justify-content: center;
+    }
+
+    .home__ilustracion img{
+        width: 350px;
+        height: 350px;
+    }
+
+    /* About */
+
+    .about{
+        position: relative;
+        display: flex;
+        min-height: 80vh;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0px;
+        row-gap: 50px;
+        flex-direction: column-reverse;
+    }
+
+    .about__text{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about__parrafo{
+        min-width: 100%; 
+     } 
+
+    .about__ilustracion{
+        justify-content: center;
+    }
+
+     /* NFTs */
+
+     .nfts{
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+     }
+
+     .nfts__ico{
+        right: 60%;
+        transform: translateX(50%);        
+        top: 100px;
+     }
+
+     .nfts__buscadors .nfts__ico:nth-child(1){
+        right: 60%;
+        transform: translateX(50%); 
+    }
+    
+    .nfts__buscadors .nfts__ico:nth-child(2){
+        right: 53%;
+        transform: translateX(50%); 
+    }
+    
+    .nfts__buscadors .nfts__ico:nth-child(3){
+        right: 47%;
+        transform: translateX(50%);
+    }
+    
+    .nfts__buscadors .nfts__ico:nth-child(4){
+        right: 40%;
+        transform: translateX(50%);
+    }
+
+    .nfts__buscadors .nfts__ico:hover, .nfts__buscadors .nfts__ico.active{
+        top: 80px;
+    }
+
+    
+    /* Team */
+    .team{
+        margin-top: 100px;
+    }
+
+    .team__tarjetas-title{
+        font-size: 1.3rem;
+    }
+
+    /* FAQ */
+
+    .faq{
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        max-width: 100%;
+        margin: 200px 0 0 0;
+    }
+
+    .faq::before{
+        top: -50px;
+        left: 0px;
+        width: 100%;
+        padding: 0px; 
+        height: 650px;
+    }
+
+    .faq__header{
+        min-width: 100%;
+    }
+
+    .faq__description{
+        text-align: center;
+    }
+
+    /* Footer  */
+    .footer{
+        width: 100%;
+        min-height: 100%;
+        height: 310px;
+    }
+
+    .footer__contenedor{
+        flex-direction: column;
+        height: 300px;
+        justify-content: space-around;
+        left: 0px;
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 800px){
+    /* Road Map */
+    .roadmap__contenedor .svgPath path{
+        width: 300px;
+    }
+    
+    .roadmap__phase{
+        position: absolute;
+        right: 50%;
+        width: 250px;
+        text-align: end;
+    }
+    
+    .phase-2{
+        top: 500px;
+        left: 50%;
+        text-align: start;
+    }
+    
+    .phase-3{
+        top: 1000px;
+    }
+    
+    .phase-4{
+        top: 1500px;
+        left: 50%;
+        text-align: start;
+    }
+
+
+
+}
+
+@media screen and (max-width: 550px){
+    /* Road Map */
+    .roadmap__contenedor .svgPath{
+       display: none;
+    }
+
+    .roadmap__contenedor{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        padding-bottom: 10px;
+    }
+    
+    .roadmap__phase{
+        position: relative;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .phase-2{
+        top: 0;
+        left: 0;
+        text-align: center;
+    }
+    
+    .phase-3{
+        top: 0px;
+        text-align: center;
+    }
+    
+    .phase-4{
+        top: 0;
+        left: 0;
+        text-align: center;
+    }
+ }
+
+@media screen and (max-width: 450px){
+    section {
+        padding: 0 15px;
+    }
+
+    .title{
+        font-size: 2rem;
+    }
+
+    .subtitle{
+        font-size: 2rem;
+    }
+
+    .home__botons{
+        transform: scale(0.9);
+    }
+
+    /* Home */
+
+    .home__botons{
+        column-gap: 5px;
+    }
+
+    .home__ilustracion img{
+        width: 250px;
+        height: 250px;
+    }
+
+    /* About */
+
+    .about{
+        height: 90vh;
+    }
+
+    .about__text {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .about__ilustracion{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 5px;
+
+    }
+    
+    .about__ilustracion img{
+        position: relative;
+        width: 100px;
+        height: 130px;
+        border-radius: 20px;
+    } 
+
+    /* NFTs */
+
+    .nfts__buscadors .nfts__ico:nth-child(1){
+        right: 70%;
+        transform: translateX(50%); 
+    }
+    
+    .nfts__buscadors .nfts__ico:nth-child(2){
+        right: 56%;
+        transform: translateX(50%); 
+    }
+    
+    .nfts__buscadors .nfts__ico:nth-child(3){
+        right: 43%;
+        transform: translateX(50%);
+    }
+    
+    .nfts__buscadors .nfts__ico:nth-child(4){
+        right: 30%;
+        transform: translateX(50%);
+    }
+
+    .faq{
+        height: 800px;
+    }
+
+    .faq::before{ 
+        height: 850px;
     }
 }
 

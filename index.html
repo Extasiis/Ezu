@@ -55,21 +55,22 @@
         <div class="logo">
             <a href="#"><img src="./Recursos/img/logo.svg" alt="logo"></a>
         </div>
+        <div class="ico-nav" onclick="menu()"></div>
         <nav class="nav">
             <ul class="nav__lista">
-                <li class="nav__listas"><a href="#" class="nav__enlace">Home</a></li>
-                <li class="nav__listas"><a href="#" class="nav__enlace">Nosotros</a></li>
-                <li class="nav__listas"><a href="#" class="nav__enlace">NFTs</a></li>
-                <li class="nav__listas"><a href="#" class="nav__enlace">RoadMap</a></li>
-                <li class="nav__listas"><a href="#" class="nav__enlace">Team</a></li>
-                <li class="nav__listas"><a href="#" class="nav__enlace">Dudas</a></li>
+                <li class="nav__listas"><a href="#home" class="nav__enlace">Home</a></li>
+                <li class="nav__listas"><a href="#about" class="nav__enlace">Nosotros</a></li>
+                <li class="nav__listas"><a href="#nfts" class="nav__enlace">NFTs</a></li>
+                <li class="nav__listas"><a href="#roadmap" class="nav__enlace">RoadMap</a></li>
+                <li class="nav__listas"><a href="#team" class="nav__enlace">Team</a></li>
+                <li class="nav__listas"><a href="#faq" class="nav__enlace">Dudas</a></li>
             </ul>
             <div class="btn__contenedor">
                 <a href="#" class="btn">Mint</a>
             </div>
         </nav>
     </header>
-    <section class="home">
+    <section class="home" id="home">
         <div class="home__text">
             <h1 class="home__title title">
                 <span>NFTs</span>
@@ -93,7 +94,7 @@
             <img src="./Recursos/img/2.jpg" alt="imagen de ezus">
         </div>
     </section>
-    <section class="about">        
+    <section class="about" id="about">        
         <div class="about__ilustracion">
             <img src="./Recursos/img/1.jpg" alt="imagen de ezus">
             <img src="./Recursos/img/3.jpg" alt="imagen de ezus">
@@ -116,7 +117,7 @@
             </div>
         </div>
     </section>
-    <section class="nfts">
+    <section class="nfts" id="nfts">
         <h2 class="nfts__title title">
             <span>collections</span>
             <br>
@@ -564,7 +565,7 @@
             </div>
         </div>
     </section>
-    <section class="roadmap">
+    <section class="roadmap" id="roadmap">
         <h2 class="roadmap__title title">
             <span>RoadMap</span>
             <br>
@@ -645,7 +646,7 @@
             </div>
         </div>
     </section>
-    <section class="team">
+    <section class="team" id="team">
         <h2 class="team__title title">
             <span>Team</span>
             <br>
@@ -657,7 +658,17 @@
                     <img src="./Recursos/img/real-real06.png" alt="" class="team__header-img">
                 </div>
                 <div class="team__tarjetas-body">
-                    <div class="h2"></div>
+                    <h3 class="team__tarjetas-title title">
+                        <span>CEO</span>
+                        <br>
+                        David Code
+                    </h3>
+                    <p class="team__tarjetas-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis perferendis repellendus nostrum neque. Totam Culpa reprehenderit</p>
+                    <div class="team__tarjetas-redes">
+                        <div class="btn__contenedor btn-ico"><a href="#" class="btn"><img src="./Recursos/img/facebook-brands.svg" alt=""></a></div>
+                        <div class="btn__contenedor btn-ico"><a href="#" class="btn"><img src="./Recursos/img/twitter.png" alt=""></a></div>
+                        <div class="btn__contenedor btn-ico"><a href="#" class="btn"><img src="./Recursos/img/instagram.png" alt=""></a></div>
+                    </div>
                 </div>
             </div>
             <div class="team__tarjetas">
@@ -665,7 +676,17 @@
                     <img src="./Recursos/img/real-real08.png" alt="" class="team__header-img">
                 </div>
                 <div class="team__tarjetas-body">
-                    
+                    <h3 class="team__tarjetas-title title">
+                        <span>Marketing</span>
+                        <br>
+                        Daniela Code
+                    </h3>
+                    <p class="team__tarjetas-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis perferendis repellendus nostrum neque. Totam Culpa reprehenderit</p>
+                    <div class="team__tarjetas-redes">
+                        <div class="btn__contenedor btn-ico"><a href="#" class="btn"><img src="./Recursos/img/facebook-brands.svg" alt=""></a></div>
+                        <div class="btn__contenedor btn-ico"><a href="#" class="btn"><img src="./Recursos/img/twitter.png" alt=""></a></div>
+                        <div class="btn__contenedor btn-ico"><a href="#" class="btn"><img src="./Recursos/img/instagram.png" alt=""></a></div>
+                    </div>
                 </div>
             </div>
             <div class="team__tarjetas">
@@ -673,7 +694,17 @@
                     <img src="./Recursos/img/real-real05.png" alt="" class="team__header-img">
                 </div>
                 <div class="team__tarjetas-body">
-                    
+                    <h3 class="team__tarjetas-title title">
+                        <span>Frontend</span>
+                        <br>
+                        David Code
+                    </h3>
+                    <p class="team__tarjetas-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis perferendis repellendus nostrum neque. Totam Culpa reprehenderit</p>
+                    <div class="team__tarjetas-redes">
+                        <div class="btn__contenedor btn-ico"><a href="#" class="btn"><img src="./Recursos/img/facebook-brands.svg" alt=""></a></div>
+                        <div class="btn__contenedor btn-ico"><a href="#" class="btn"><img src="./Recursos/img/twitter.png" alt=""></a></div>
+                        <div class="btn__contenedor btn-ico"><a href="#" class="btn"><img src="./Recursos/img/github.png" alt=""></a></div>
+                    </div>
                 </div>
             </div>
             <div class="team__tarjetas">
@@ -681,11 +712,104 @@
                     <img src="./Recursos/img/real-real01.png" alt="" class="team__header-img">
                 </div>
                 <div class="team__tarjetas-body">
-                    
+                    <h3 class="team__tarjetas-title title">
+                        <span>Backend</span>
+                        <br>
+                        David Code
+                    </h3>
+                    <p class="team__tarjetas-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis perferendis repellendus nostrum neque. Totam Culpa reprehenderit</p>
+                    <div class="team__tarjetas-redes">
+                        <div class="btn__contenedor btn-ico"><a href="#" class="btn"><img src="./Recursos/img/facebook-brands.svg" alt=""></a></div>
+                        <div class="btn__contenedor btn-ico"><a href="#" class="btn"><img src="./Recursos/img/twitter.png" alt=""></a></div>
+                        <div class="btn__contenedor btn-ico"><a href="#" class="btn"><img src="./Recursos/img/github.png" alt=""></a></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <section class="faq" id="faq">
+        <div class="faq__header">
+            <h2 class="faq__title title">
+              <span>Tienes dudas</span>
+              <br>
+              Pregunstas frecuentes
+            </h2>
+            <p class="faq__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. In tempore accusamus aperiam odio quod reprehenderit ipsum vel qui, deleniti quo earum illo. Neque, dicta exercitationem expedita quod facere veritatis suscipit!</p>
+          </div>
+          <div class="faq__body">
+            <div class="faq__faq">
+              <input type="radio" name="acc" id="faq-1" class="faq__selection">
+              <label for="faq-1" class="faq__selection-label">
+                <h2 class="faq__duda">Como aplicar a la WL?</h2>
+                <h3>01</h3>
+              </label>
+              <div class="faq__respuesta">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis voluptates odio nisi voluptas omnis provident sapiente maiores, eum laudantium accusamus esse? Numquam dicta placeat animi facere aperiam libero id iste!</p>
+              </div>
+            </div>
+            <div class="faq__faq">
+              <input type="radio" name="acc" id="faq-2" class="faq__selection">
+              <label for="faq-2" class="faq__selection-label">
+                <h2 class="faq__duda">Cuanto es el Supply?</h2>
+                <h3>02</h3>
+              </label>
+              <div class="faq__respuesta">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis voluptates accusantium atque laborum quasi adipisci nisi totam recusandae, deleniti nulla impedit excepturi et officiis mollitia odio quibusdam. Iure, quas iusto.</p>
+              </div>
+            </div>
+            <div class="faq__faq">
+              <input type="radio" name="acc" id="faq-3" class="faq__selection">
+              <label for="faq-3" class="faq__selection-label">
+                <h2 class="faq__duda">Cual va ser el valor de los NFTs?</h2>
+                <h3>03</h3>
+              </label>
+              <div class="faq__respuesta">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, sunt cum ut quia, laudantium provident ad tempora, expedita aut totam similique autem qui amet repellat. Labore quaerat error quod quia.</p>
+              </div>
+            </div>
+            <div class="faq__faq">
+              <input type="radio" name="acc" id="faq-4" class="faq__selection">
+              <label for="faq-4" class="faq__selection-label">
+                <h2 class="faq__duda">Fecha de acuñacion?</h2>
+                <h3>04</h3>
+              </label>
+              <div class="faq__respuesta">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quo officia odit unde. Ab atque, pariatur cumque quos iste non! Earum obcaecati, facere dolorum consequatur itaque consectetur placeat corporis amet?</p>
+              </div>
+            </div>
+            <div class="faq__faq">
+              <input type="radio" name="acc" id="faq-5" class="faq__selection">
+              <label for="faq-5" class="faq__selection-label">
+                <h2 class="faq__duda">En que red trabajamos?</h2>
+                <h3>05</h3>
+              </label>
+              <div class="faq__respuesta">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quo officia odit unde. Ab atque, pariatur cumque quos iste non! Earum obcaecati, facere dolorum consequatur itaque consectetur placeat corporis amet?</p>
+              </div>
+            </div>
+       </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__contenedor">
+          <div class="footer__part part-1">
+            <div class="footer__image">
+              <img src="./Recursos/img/logo.svg" alt="" class="footer__logo">
+            </div>
+          </div>
+          <div class="footer__part part-2">
+            <h2 class="footer__nombre">David Code</h2>
+            <p class="footer__profesion">Desarrollador Frontend</p>
+          </div>
+          <div class="footer__part part-3">
+            <ul class="footer__redes">
+                <div class="footer__tarjetas-redes">
+                    <div class="btn__contenedor btn-ico"><a href="#" class="btn"><img src="./Recursos/img/facebook-brands.svg" alt=""></a></div>
+                    <div class="btn__contenedor btn-ico"><a href="#" class="btn"><img src="./Recursos/img/twitter.png" alt=""></a></div>
+                    <div class="btn__contenedor btn-ico"><a href="#" class="btn"><img src="./Recursos/img/instagram.png" alt=""></a></div>
+                </div></ul>
+          </div>
+        </div>
+    </footer>
     <script src="./js/app.js"></script>
 </body>
 </html>
