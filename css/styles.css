@@ -1209,6 +1209,17 @@ header{
         right: 10%;
         animation: movimiento2 30s linear infinite;
     }
+
+    .home__parrafo{
+        max-width: 650px;
+        min-width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .home__ilustracion img{
+        width: 400px;
+        height: 400px;
+    }
 }
 
 @media screen and (max-width: 1050px) {
